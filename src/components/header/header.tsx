@@ -62,13 +62,16 @@ const Header = () => {
           <ul className="hidden sm:flex gap-[40px]">
             {links.map((l, index) => {
               return (
-                <li key={index} className="font-semibold">
+                <li
+                  key={index}
+                  className="font-semibold text-black hover:text-black/30"
+                >
                   <Link to={l.link}>{l.title.toUpperCase()}</Link>
                 </li>
               );
             })}
           </ul>
-          <button className="hidden sm:block w-[158px] h-[40px] bg-black text-white font-semibold">
+          <button className="hidden sm:block w-[158px] h-[40px] bg-black hover:bg-[#DFDFDF] text-white hover:text-black font-semibold">
             GET AN INVITE
           </button>
           <button

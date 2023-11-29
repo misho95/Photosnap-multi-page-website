@@ -4,6 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Container from "./components/shared/container";
 import Header from "./components/header/header";
+import IndexPage from "./pages/index.page";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
     element: (
       <Container>
         <Header />
+        <IndexPage />
       </Container>
     ),
   },

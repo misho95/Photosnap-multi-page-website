@@ -10,14 +10,17 @@ const BurgerMenu = () => {
         <ul className="flex flex-col items-center gap-[15px]">
           {links.map((l, index) => {
             return (
-              <li key={index} className="font-semibold text-[15px]">
+              <li
+                key={index}
+                className="font-semibold text-[15px] text-black hover:text-black/30"
+              >
                 <Link to={l.link}>{l.title.toUpperCase()}</Link>
               </li>
             );
           })}
         </ul>
         <div className="w-full h-[1px] bg-black/25"></div>
-        <button className="bg-black h-[48px] text-white text-[15px] font-semibold">
+        <button className="bg-black hover:bg-[#DFDFDF] h-[48px] text-white hover:text-black text-[15px] font-semibold">
           GET AN INVITE
         </button>
       </div>
