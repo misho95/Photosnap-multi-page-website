@@ -2,12 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Container from "./components/container";
+import Container from "./components/shared/container";
+import Header from "./components/header/header";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Container>text</Container>,
+    element: (
+      <Container>
+        <Header />
+      </Container>
+    ),
   },
 ]);
 
