@@ -5,7 +5,7 @@ import { useLockBodyScroll } from "@uidotdev/usehooks";
 const BurgerMenu = () => {
   useLockBodyScroll();
   return (
-    <nav className="bg-black/50 fixed top-[55px] left-0 w-full h-screen font-DMSans">
+    <nav className="bg-black/50 fixed top-[55px] left-0 w-full h-screen font-DMSans z-50">
       <div className="bg-white p-[40px] flex flex-col gap-[20px]">
         <ul className="flex flex-col items-center gap-[15px]">
           {links.map((l, index) => {

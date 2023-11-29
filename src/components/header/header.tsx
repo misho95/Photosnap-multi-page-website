@@ -19,12 +19,12 @@ const Header = () => {
   }, [windowSize]);
 
   const animatedHeader = useSpring({
-    from: { y: -200 },
+    from: { y: -100 },
     to: { y: 0 },
     config: {
       mass: 5,
       friction: 20,
-      tension: 30,
+      tension: 80,
     },
   });
 
@@ -47,6 +47,12 @@ const Header = () => {
       },
     });
   };
+
+  useEffect(() => {
+    if (showMenu && window.scrollY > 0) {
+      window.scrollTo(0, 0);
+    }
+  }, [showMenu]);
 
   return (
     <>
