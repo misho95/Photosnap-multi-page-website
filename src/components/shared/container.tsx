@@ -5,7 +5,7 @@ interface PropsType {
 }
 
 const Container = ({ children }: PropsType) => {
-  return <div className="flex flex-col">{children}</div>;
+  return <div className="flex flex-col gap-[110px]">{children}</div>;
 };
 
 export default Container;

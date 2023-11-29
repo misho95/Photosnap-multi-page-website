@@ -6,15 +6,19 @@ import Container from "./components/shared/container";
 import Header from "./components/header/header";
 import IndexPage from "./pages/index.page";
 import InfoComponent from "./components/shared/info.component";
+import Footer from "./components/footer/footer";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <Container>
-        <Header />
-        <IndexPage />
+        <div>
+          <Header />
+          <IndexPage />
+        </div>
         <InfoComponent />
+        <Footer />
       </Container>
     ),
   },

@@ -36,7 +36,7 @@ const InfoComponent = () => {
   return (
     <animated.div
       style={{ ...animatedPage }}
-      className="flex flex-col lg:flex-row justify-center items-center gap-[45px] my-[110px]"
+      className="flex flex-col lg:flex-row justify-center items-center gap-[45px]"
     >
       {data.map((d) => {
         return (
