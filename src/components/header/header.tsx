@@ -22,9 +22,9 @@ const Header = () => {
     from: { y: -100 },
     to: { y: 0 },
     config: {
-      mass: 5,
+      mass: 1,
       friction: 20,
-      tension: 80,
+      tension: 40,
     },
   });
 
