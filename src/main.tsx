@@ -7,6 +7,7 @@ import Header from "./components/header/header";
 import IndexPage from "./pages/index.page";
 import InfoComponent from "./components/shared/info.component";
 import Footer from "./components/footer/footer";
+import StoriesPage from "./pages/stories.page";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,18 @@ const router = createBrowserRouter([
         </div>
         <InfoComponent />
         <Footer />
+      </Container>
+    ),
+  },
+  {
+    path: "/stories",
+    element: (
+      <Container>
+        <div>
+          <Header />
+          <StoriesPage />
+          <Footer />
+        </div>
       </Container>
     ),
   },
