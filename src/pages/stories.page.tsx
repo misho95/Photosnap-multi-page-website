@@ -1,5 +1,6 @@
 import { animated, useSpring } from "@react-spring/web";
 import ArrowButton from "../components/shared/arrow.button";
+import StoriesComponent from "../components/stories/stories.components";
 
 const StoriesPage = () => {
   const animatedPage = useSpring({
@@ -32,6 +33,7 @@ const StoriesPage = () => {
             <ArrowButton type="primary" />
           </div>
         </div>
+        <StoriesComponent />
       </animated.section>
     </main>
   );
