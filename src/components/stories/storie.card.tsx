@@ -43,7 +43,7 @@ const StorieCard = ({ date, title, author, img, divSize }: PropsType) => {
 
   return (
     <div
-      className={`bg-contain flex items-end justify-center p-[40px] hover:-translate-y-[38px] relative group`}
+      className={`bg-contain flex items-end justify-center p-[40px] hover:-translate-y-[38px] relative group hover:z-30`}
       style={{
         width: cardWidth,
         height: cardHeight,
