@@ -8,6 +8,7 @@ import IndexPage from "./pages/index.page";
 import InfoComponent from "./components/shared/info.component";
 import Footer from "./components/footer/footer";
 import StoriesPage from "./pages/stories.page";
+import FeaturesPage from "./pages/features.page";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,19 @@ const router = createBrowserRouter([
         <div>
           <Header />
           <StoriesPage />
+          <Footer />
+        </div>
+      </Container>
+    ),
+  },
+  {
+    path: "/features",
+    element: (
+      <Container>
+        <div>
+          <Header />
+          <FeaturesPage />
+
           <Footer />
         </div>
       </Container>

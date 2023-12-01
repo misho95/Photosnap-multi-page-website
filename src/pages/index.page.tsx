@@ -57,6 +57,7 @@ const IndexPage = () => {
               img={d.img}
               type={d.type}
               side={d.side}
+              button={true}
             />
           );
         })}

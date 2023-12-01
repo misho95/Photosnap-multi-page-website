@@ -6,9 +6,17 @@ interface PropsType {
   img: string;
   type: string;
   side: string;
+  button: boolean;
 }
 
-const StoriesComponent = ({ title, text, img, type, side }: PropsType) => {
+const StoriesComponent = ({
+  title,
+  text,
+  img,
+  type,
+  side,
+  button,
+}: PropsType) => {
   return (
     <div className="h-fit sm:h-[650px] flex flex-col sm:flex-row">
       <div className="w-full sm:hidden">
@@ -42,7 +50,7 @@ const StoriesComponent = ({ title, text, img, type, side }: PropsType) => {
           >
             {text}
           </p>
-          <ArrowButton type={type} />
+          {button && <ArrowButton type={type} />}
         </div>
       </div>
       {side === "left" && (

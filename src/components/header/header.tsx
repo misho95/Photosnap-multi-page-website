@@ -55,45 +55,43 @@ const Header = () => {
   }, [showMenu]);
 
   return (
-    <>
+    <animated.header
+      style={{ ...animatedHeader }}
+      className="w-full flex justify-center font-DMSans"
+    >
       {showMenu && <BurgerMenu />}
-      <animated.header
-        style={{ ...animatedHeader }}
-        className="w-full flex justify-center font-DMSans"
-      >
-        <div className=" w-full lg:w-10/12 p-[20px] flex justify-between items-center">
-          <Link to={"/"} onClick={() => showMenu && setShowMenu(false)}>
-            <img src={Logo} className="w-[170px] h-[16px]" />
-          </Link>
-          <ul className="hidden sm:flex gap-[40px]">
-            {links.map((l, index) => {
-              return (
-                <li
-                  key={index}
-                  className="font-semibold text-black hover:text-black/30"
-                >
-                  <Link to={l.link}>{l.title.toUpperCase()}</Link>
-                </li>
-              );
-            })}
-          </ul>
-          <button className="hidden sm:block w-[158px] h-[40px] bg-black hover:bg-[#DFDFDF] text-white hover:text-black font-semibold">
-            GET AN INVITE
-          </button>
-          <button
-            onClick={() => {
-              setShowMenu(!showMenu), iconAnimationHandler();
-            }}
-            className="sm:hidden"
-          >
-            <animated.img
-              style={{ ...animateIcon }}
-              src={showMenu ? menuClose : menu}
-            />
-          </button>
-        </div>
-      </animated.header>
-    </>
+      <div className=" w-full lg:w-10/12 p-[20px] flex justify-between items-center">
+        <Link to={"/"} onClick={() => showMenu && setShowMenu(false)}>
+          <img src={Logo} className="w-[170px] h-[16px]" />
+        </Link>
+        <ul className="hidden sm:flex gap-[40px]">
+          {links.map((l, index) => {
+            return (
+              <li
+                key={index}
+                className="font-semibold text-black hover:text-black/30"
+              >
+                <Link to={l.link}>{l.title.toUpperCase()}</Link>
+              </li>
+            );
+          })}
+        </ul>
+        <button className="hidden sm:block w-[158px] h-[40px] bg-black hover:bg-[#DFDFDF] text-white hover:text-black font-semibold">
+          GET AN INVITE
+        </button>
+        <button
+          onClick={() => {
+            setShowMenu(!showMenu), iconAnimationHandler();
+          }}
+          className="sm:hidden"
+        >
+          <animated.img
+            style={{ ...animateIcon }}
+            src={showMenu ? menuClose : menu}
+          />
+        </button>
+      </div>
+    </animated.header>
   );
 };
 
