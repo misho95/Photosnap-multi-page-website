@@ -1,12 +1,11 @@
 import Logo from "../../assets/shared/desktop/logo.svg";
 import menu from "../../assets/shared/mobile/menu.svg";
 import menuClose from "../../assets/shared/mobile/close.svg";
-
 import { Link } from "react-router-dom";
 import { links } from "./links";
 import { animated, useSpring } from "@react-spring/web";
-import { useEffect, useState } from "react";
-import BurgerMenu from "./burger.menu";
+import { Suspense, lazy, useEffect, useState } from "react";
+const BurgerMenu = lazy(() => import("./burger.menu"));
 import { useWindowSize } from "@uidotdev/usehooks";
 
 const Header = () => {
@@ -59,7 +58,11 @@ const Header = () => {
       style={{ ...animatedHeader }}
       className="w-full flex justify-center font-DMSans"
     >
-      {showMenu && <BurgerMenu />}
+      {showMenu && (
+        <Suspense fallback={""}>
+          <BurgerMenu />
+        </Suspense>
+      )}
       <div className=" w-full lg:w-10/12 p-[20px] flex justify-between items-center">
         <Link to={"/"} onClick={() => showMenu && setShowMenu(false)}>
           <img src={Logo} className="w-[170px] h-[16px]" alt="photosnap" />
