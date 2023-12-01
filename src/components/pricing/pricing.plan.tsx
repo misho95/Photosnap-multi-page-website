@@ -1,4 +1,20 @@
-const PricingPlan = ({ title, text, price, active, setActive, monthly }) => {
+interface PropsType {
+  title: string;
+  text: string;
+  price: number;
+  active: string;
+  setActive: (arg: string) => void;
+  monthly: boolean;
+}
+
+const PricingPlan = ({
+  title,
+  text,
+  price,
+  active,
+  setActive,
+  monthly,
+}: PropsType) => {
   return (
     <div
       className={`${
