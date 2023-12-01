@@ -124,7 +124,12 @@ const Footer = () => {
           <span className="flex flex-col justify-center items-center gap-[25px] sm:gap-[80px]">
             <div className="flex flex-col gap-[30px]">
               <Link to={"/"}>
-                <img src={Logo} className="w-[170px] h-[16px]" />
+                <img
+                  src={Logo}
+                  className="w-[170px] h-[16px]"
+                  alt="photosnap"
+                  loading="lazy"
+                />
               </Link>
               <ul className="hidden sm:flex lg:hidden flex-row justify-center items-center gap-[14px] text-[12px] h-fit font-DMSans">
                 <li className="font-semibold text-white hover:text-white/30">

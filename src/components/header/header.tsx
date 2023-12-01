@@ -62,7 +62,7 @@ const Header = () => {
       {showMenu && <BurgerMenu />}
       <div className=" w-full lg:w-10/12 p-[20px] flex justify-between items-center">
         <Link to={"/"} onClick={() => showMenu && setShowMenu(false)}>
-          <img src={Logo} className="w-[170px] h-[16px]" />
+          <img src={Logo} className="w-[170px] h-[16px]" alt="photosnap" />
         </Link>
         <nav>
           <ul className="hidden sm:flex gap-[40px]">

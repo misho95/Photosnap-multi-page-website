@@ -22,14 +22,18 @@ const StoriesComponent = ({
       <div className="w-full sm:hidden">
         <img
           src={img}
-          className="w-full object-cover h-[294px] sm:h-[650px] text-white "
+          className="w-full object-cover h-[294px] sm:h-[650px] text-white"
+          loading="lazy"
+          alt={title}
         />
       </div>
       {side === "right" && (
         <div className="w-full hidden sm:flex">
           <img
             src={img}
-            className="w-full object-cover h-[650px] text-white "
+            className="w-full object-cover h-[650px] text-white"
+            loading="lazy"
+            alt={title}
           />
         </div>
       )}
@@ -59,7 +63,7 @@ const StoriesComponent = ({
             src={img}
             className="w-full object-cover h-[650px] text-white"
             loading="lazy"
-            alt={img}
+            alt={title}
           />
         </div>
       )}

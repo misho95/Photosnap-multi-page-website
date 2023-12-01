@@ -44,7 +44,12 @@ const InfoComponent = () => {
             key={d.id}
             className="w-[350px] h-[236px] justify-center items-center flex flex-col gap-[20px] text-center"
           >
-            <img src={d.img} className="w-[72px] h-[72px] mb-[50px]" />
+            <img
+              src={d.img}
+              className="w-[72px] h-[72px] mb-[50px]"
+              alt={d.title}
+              loading="lazy"
+            />
             <h1 className="text-[18px] font-semibold">{d.title}</h1>
             <p className="text-black/60 text-[15px]">{d.text}</p>
           </div>
