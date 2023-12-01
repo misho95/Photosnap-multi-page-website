@@ -1,4 +1,3 @@
-import { useInView } from "react-hook-inview";
 import ArrowButton from "../shared/arrow.button";
 
 interface PropsType {
@@ -18,18 +17,13 @@ const StoriesComponent = ({
   side,
   button,
 }: PropsType) => {
-  const [ref, inView] = useInView();
-
   return (
-    <div
-      ref={ref}
-      className="h-fit sm:h-[650px] flex flex-col sm:flex-row select-none"
-    >
+    <div className="h-fit sm:h-[650px] flex flex-col sm:flex-row select-none">
       <div className="w-full sm:hidden">
         <img
           src={img}
           className="w-full object-cover h-[294px] sm:h-[650px] text-white"
-          loading={inView ? "eager" : "lazy"}
+          loading="lazy"
           alt={title}
         />
       </div>
@@ -38,7 +32,7 @@ const StoriesComponent = ({
           <img
             src={img}
             className="w-full object-cover h-[650px] text-white"
-            loading={inView ? "eager" : "lazy"}
+            loading="lazy"
             alt={title}
           />
         </div>
@@ -68,7 +62,7 @@ const StoriesComponent = ({
           <img
             src={img}
             className="w-full object-cover h-[650px] text-white"
-            loading={inView ? "eager" : "lazy"}
+            loading="lazy"
             alt={title}
           />
         </div>
