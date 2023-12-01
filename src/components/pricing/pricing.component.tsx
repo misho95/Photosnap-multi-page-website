@@ -117,7 +117,7 @@ const PricingComponent = () => {
           />
         </div>
         <div className="flex justify-center items-center select-none font-DMSans">
-          <table className="w-[731px] ">
+          <table className="w-full sm:w-[731px]">
             <thead>
               <tr className="border-b-[1px] border-black">
                 <th className="pb-[25px] text-left">THE FEATURES</th>
