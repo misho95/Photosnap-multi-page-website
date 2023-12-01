@@ -58,8 +58,8 @@ const PricingPlan = ({
       <button
         onClick={() => setActive(title)}
         className={`w-[270px] h-[40px] ${
-          active === title ? "bg-white text-black" : "bg-black text-white "
-        } font-bold`}
+          active === title ? "bg-white text-black" : "bg-black text-white"
+        } font-bold hover:bg-[#DFDFDF] hover:text-black`}
       >
         PICK PLAN
       </button>
