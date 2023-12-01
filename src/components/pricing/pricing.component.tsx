@@ -118,28 +118,32 @@ const PricingComponent = () => {
         </div>
         <div className="flex justify-center items-center select-none font-DMSans">
           <table className="w-[731px] ">
-            <tr className="border-b-[1px] border-black">
-              <th className="pb-[25px] text-left">THE FEATURES</th>
-              <th className="w-[140px] text-center">BASIC</th>
-              <th className="w-[140px] text-center">PRO</th>
-              <th className="w-[140px] text-center">BUSINESS</th>
-            </tr>
-            {data.map((d) => {
-              return (
-                <tr className="border-b-[1px] border-[#D8D8D8]">
-                  <td className="py-[25px] font-semibold">{d.title}</td>
-                  <td align="center" className="w-[140px]">
-                    {d.basic && <img src={icon} />}
-                  </td>
-                  <td align="center" className="w-[140px]">
-                    {d.pro && <img src={icon} />}
-                  </td>
-                  <td align="center" className="w-[140px]">
-                    {d.business && <img src={icon} />}
-                  </td>
-                </tr>
-              );
-            })}
+            <thead>
+              <tr className="border-b-[1px] border-black">
+                <th className="pb-[25px] text-left">THE FEATURES</th>
+                <th className="w-[140px] text-center">BASIC</th>
+                <th className="w-[140px] text-center">PRO</th>
+                <th className="w-[140px] text-center">BUSINESS</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((d, index) => {
+                return (
+                  <tr key={index} className="border-b-[1px] border-[#D8D8D8]">
+                    <td className="py-[25px] font-semibold">{d.title}</td>
+                    <td align="center" className="w-[140px]">
+                      {d.basic && <img src={icon} />}
+                    </td>
+                    <td align="center" className="w-[140px]">
+                      {d.pro && <img src={icon} />}
+                    </td>
+                    <td align="center" className="w-[140px]">
+                      {d.business && <img src={icon} />}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
           </table>
         </div>
       </div>
