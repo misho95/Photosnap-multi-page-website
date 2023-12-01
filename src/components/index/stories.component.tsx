@@ -23,7 +23,6 @@ const StoriesComponent = ({
         <img
           src={img}
           className="w-full object-cover h-[294px] sm:h-[650px] text-white"
-          loading="lazy"
           alt={title}
         />
       </div>
@@ -32,7 +31,6 @@ const StoriesComponent = ({
           <img
             src={img}
             className="w-full object-cover h-[650px] text-white"
-            loading="lazy"
             alt={title}
           />
         </div>
@@ -62,7 +60,6 @@ const StoriesComponent = ({
           <img
             src={img}
             className="w-full object-cover h-[650px] text-white"
-            loading="lazy"
             alt={title}
           />
         </div>
