@@ -9,6 +9,7 @@ import InfoComponent from "./components/shared/info.component";
 import Footer from "./components/footer/footer";
 import StoriesPage from "./pages/stories.page";
 import FeaturesPage from "./pages/features.page";
+import PricingPage from "./pages/pricing.page";
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,18 @@ const router = createBrowserRouter([
         <div>
           <Header />
           <FeaturesPage />
-
+          <Footer />
+        </div>
+      </Container>
+    ),
+  },
+  {
+    path: "/pricing",
+    element: (
+      <Container>
+        <div>
+          <Header />
+          <PricingPage />
           <Footer />
         </div>
       </Container>

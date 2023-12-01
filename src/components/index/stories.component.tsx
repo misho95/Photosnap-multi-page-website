@@ -18,7 +18,7 @@ const StoriesComponent = ({
   button,
 }: PropsType) => {
   return (
-    <div className="h-fit sm:h-[650px] flex flex-col sm:flex-row">
+    <div className="h-fit sm:h-[650px] flex flex-col sm:flex-row select-none">
       <div className="w-full sm:hidden">
         <img
           src={img}
