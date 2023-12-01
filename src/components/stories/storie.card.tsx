@@ -42,7 +42,7 @@ const StorieCard = ({ date, title, author, img, divSize }: PropsType) => {
   }, [divSize]);
 
   return (
-    <div
+    <article
       className={`bg-contain flex items-end justify-center p-[40px] hover:-translate-y-[38px] relative group hover:z-30`}
       style={{
         width: cardWidth,
@@ -74,7 +74,7 @@ const StorieCard = ({ date, title, author, img, divSize }: PropsType) => {
       />
       <div className=" absolute w-full h-1/2 bottom-0 left-0 bg-gradient-to-t from-black/60 to-transparent z-20" />
       <div className="group-hover:block hidden h-[6px] w-full absolute bottom-0  bg-gradient-to-r sm:bg-gradient-to-t from-[#FFC593] via-[#BC7198] to-[#5A77FF] z-30" />
-    </div>
+    </article>
   );
 };
 
