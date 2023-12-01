@@ -47,7 +47,6 @@ const StorieCard = ({ date, title, author, img, divSize }: PropsType) => {
       style={{
         width: cardWidth,
         height: cardHeight,
-        backgroundImage: `url(${img})`,
       }}
     >
       <div className="text-white font-DMSans  w-full relative">
@@ -67,8 +66,14 @@ const StorieCard = ({ date, title, author, img, divSize }: PropsType) => {
         </div>
       </div>
 
+      <img
+        src={img}
+        className="w-full h-full absolute top-0 left-0 z-0"
+        loading="lazy"
+        alt={img}
+      />
       <div className=" absolute w-full h-1/2 bottom-0 left-0 bg-gradient-to-t from-black/60 to-transparent z-20" />
-      <div className="group-hover:block hidden h-[6px] w-full absolute bottom-0  bg-gradient-to-r sm:bg-gradient-to-t from-[#FFC593] via-[#BC7198] to-[#5A77FF]"></div>
+      <div className="group-hover:block hidden h-[6px] w-full absolute bottom-0  bg-gradient-to-r sm:bg-gradient-to-t from-[#FFC593] via-[#BC7198] to-[#5A77FF] z-30" />
     </div>
   );
 };

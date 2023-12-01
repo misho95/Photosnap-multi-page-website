@@ -111,7 +111,7 @@ const StoriesComponent = () => {
       date: "March 4th 2020",
       title: "Night at The Dark Forest",
       author: "Mohammed Abdul",
-      img: "/assets/stories/desktop/king-on-africa.jpg",
+      img: "/assets/stories/desktop/dark-forest.jpg",
     },
     {
       id: 15,

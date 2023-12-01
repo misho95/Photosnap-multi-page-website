@@ -57,7 +57,9 @@ const StoriesComponent = ({
         <div className="w-full hidden sm:flex">
           <img
             src={img}
-            className="w-full object-cover h-[650px] text-white "
+            className="w-full object-cover h-[650px] text-white"
+            loading="lazy"
+            alt={img}
           />
         </div>
       )}
