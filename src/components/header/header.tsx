@@ -86,10 +86,12 @@ const Header = () => {
             setShowMenu(!showMenu), iconAnimationHandler();
           }}
           className="sm:hidden"
+          aria-label="open/close"
         >
           <animated.img
             style={{ ...animateIcon }}
             src={showMenu ? menuClose : menu}
+            alt={showMenu ? menuClose : menu}
           />
         </button>
       </div>
