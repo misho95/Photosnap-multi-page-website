@@ -52,7 +52,7 @@ const StorieCard = ({ date, title, author, img, divSize }: PropsType) => {
       <div className="text-white font-DMSans  w-full relative">
         <div className="absolute z-30 w-full bottom-0 flex flex-col gap-[10px]">
           <p className="text-[13px]">{date}</p>
-          <h1 className="text-[18px]">{title}</h1>
+          <h2 className="text-[18px]">{title}</h2>
           <p className="text-[13px]">by {author}</p>
           <div className="h-[1px] w-full bg-white/25" />
           <button className="w-full flex justify-between items-center hover:underline">
