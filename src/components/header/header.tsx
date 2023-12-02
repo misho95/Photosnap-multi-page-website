@@ -60,7 +60,7 @@ const Header = () => {
     >
       {showMenu && (
         <Suspense fallback={""}>
-          <BurgerMenu />
+          <BurgerMenu setShowMenu={setShowMenu} />
         </Suspense>
       )}
       <div className=" w-full lg:w-10/12 p-[20px] flex justify-between items-center">
