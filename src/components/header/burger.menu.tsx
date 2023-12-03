@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { links } from "./links";
 import { useLockBodyScroll } from "@uidotdev/usehooks";
-import ArrowButton from "../shared/arrow.button";
 
 interface PropsType {
   setShowMenu: (arg: boolean) => void;
